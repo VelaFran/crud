@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container "  style="border:1px solid rgb(224, 224, 224); padding: 10px; border-radius: 9px; margin-top: 10px;">
+        <div class="row-fluid">
+            <form>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Digite o nome">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label for="sexo">Sexo</label>
+                            <select name="sexo" id="sexo" class="form-control">
+                                <option value="M">MASCULINO</option>
+                                <option value="F">FEMININO</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <button type="button" id="cadastrar" class="btn btn-outline-primary">CADASTRAR</button>
+                    </div>
+
+
+
+
+            </form>
+        </div>
+
+    </div>
+    </div>
+
+    <script src="./node_modules/jquery/dist/jquery.min.js">  </script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js">  </script>
+    <script src="./js/cadastro.js">  </script>
+</body>
+
+</html>
