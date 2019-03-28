@@ -6,14 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cadastro</title>
+
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/meuestilo.css">
 </head>
 
 <body>
-    <div class="container "  style="border:1px solid rgb(224, 224, 224); padding: 10px; border-radius: 9px; margin-top: 10px;">
+    <div class="container" style="background: white; border:1px solid rgb(224, 224, 224); padding: 10px; border-radius: 9px; margin-top: 10px;">
         <div class="row-fluid">
             <form>
                 <div class="row">
+
                     <div class="col-lg-6">
                         <div class="form-group">
                             <label for="nome">Nome</label>
@@ -30,22 +35,83 @@
                             </select>
                         </div>
                     </div>
+
                     <div class="col-lg-6">
-                        <button type="button" id="cadastrar" class="btn btn-outline-primary">CADASTRAR</button>
+                        <button type="button" id="cadastrar" data-id= "" data-acao="insert" class="btn btn-outline-primary">CADASTRAR</button>
                     </div>
 
-
-
-
+                </div>
             </form>
         </div>
 
     </div>
+
+    <div class="row mt-5" id="divtabela" >
+        <div class="col-lg-12 ">
+            <div class="row justify-content-center" >
+                <div class="col-lg-10  mt-3"  >
+                    <table class="table table-hover" id="tabelacadastro">
+                        <thead>
+                            <tr>
+                                <!-- linha-->
+                                <th>ID</th> <!-- colunas-->
+                                <th>NOME</th>
+                                <th>SEXO</th>
+                                <th>AÇÕES</th>
+
+                            </tr>
+                        </thead> <!-- seria o cabeçalho-->
+
+
+                    </table>
+                </div>
+            </div>
+
+        </div>
     </div>
 
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="row ml-1">
+                    <b>ID: </b><span id="idexcluir"></span>
+            </div>
+            <div class="row ml-1">
+                    <b>NOME: </b><span id="idnomeexcluir"></span>
+            </div>
+            <div class="row ml-1">
+                    <b>SEXO: </b><span id="idsexoexcluir"></span>
+
+            </div>
+         
+          
+          
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">CANCELAR</button>
+          <button type="button" class="btn btn-success">SIM</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <!-- SCRIPT-->
     <script src="./node_modules/jquery/dist/jquery.min.js">  </script>
+    <script src="http://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"> </script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js">  </script>
+    <script src="./node_modules/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
     <script src="./js/cadastro.js">  </script>
+
 </body>
 
 </html>
