@@ -3,7 +3,7 @@ $(document).ready(function(){
 
    
 
-    let tabela = $('#tabelacadastro').DataTable({
+    let tabela = $("#tabelacadastro").DataTable({
         ajax:{
             url:_url,
             dataSrc:""
@@ -23,13 +23,20 @@ $(document).ready(function(){
              }
 
         ],
-        columnsDefs:[
+        columnDefs:[
             {
-                targets: 0,
-                width: "30px"
+                targets:0,
+                width:"50px"
             },
             {
+                targets: 2,
+                width:"50px"
+             
+            },
+
+            {
                 targets: 3,
+                className:"text-right"
              
             }
 
@@ -40,7 +47,7 @@ $(document).ready(function(){
     });
 
 
-    $('#tabelacadastro tbody').on('click', 'button', function(){
+    $("#tabelacadastro tbody").on("click", "button", function(){
          let data = tabela.row($(this).parents('tr')).data(); 
          let acao = $(this).data('acao'); 
          $('#cadastrar').attr('data-id', data.id);
@@ -54,6 +61,8 @@ $(document).ready(function(){
          }
          else if(acao == 'delete'){
              $('#idexcluir').text(data.id);
+             $('#idexcluir').attr("value", data.id);
+
              $('#idnomeexcluir').text(data.nome);
              $('#idsexoexcluir').text(data.sexo);
              $('#exampleModal').modal('show');
@@ -64,12 +73,12 @@ $(document).ready(function(){
 
 
     $("#cadastrar").on("click", function(){
-        var _type  ;
+        var _type;
         let _data;
         var _nome = $("#nome").val();
         var _sexo = $("#sexo option:selected").val();
         // console.log(nome,sexo);
-        let acao = $(this).data('acao');
+        let acao = $(this).attr('data-acao');
         let _id = $(this).attr('data-id');
         let url_url ;
         if(acao == 'update'){
@@ -86,6 +95,7 @@ $(document).ready(function(){
             _type ="POST";
             _data = { nome: _nome,
                       sexo:_sexo }
+            url_url =_url;
 
         }
 
@@ -100,6 +110,10 @@ $(document).ready(function(){
                    tabela.ajax.reload();
                    $('#nome').val('');
                    $('#sexo').val('M');
+                   $('#cadastrar').text('CADASTRAR');
+                   $('#cadastrar').attr('data-acao', 'insert');
+
+                   $.notify("Cadastro realizado com sucesso!", {type:"success"});
 
 
                 }
@@ -109,6 +123,30 @@ $(document).ready(function(){
 
             }
         })
+
+
+    })
+
+    $("#btnExcluir").on("click", function(){
+        let id = $("#idexcluir").attr('value');
+
+        $.ajax({
+            type: "DELETE",
+            url: `${_url}/${id}`,
+            dataType: "json",
+            success: function(data){
+               
+            tabela.ajax.reload();
+            $("#exampleModal").modal('hide');
+
+
+            },
+            error: function(erro){
+                console.log("errou");
+
+            }
+        })
+
 
 
     })

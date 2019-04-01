@@ -6,67 +6,52 @@
       "sexo": "F"
     },
     {
-      "id": 2,
-      "nome": "Larissa",
-      "sexo": "F"
-    },
-    {
-      "id": 3,
-      "nome": "Leonardo",
-      "sexo": "M"
-    },
-    {
-      "id": 4,
-      "nome": "Bruno",
-      "sexo": "F"
-    },
-    {
-      "id": 5,
-      "nome": "João",
-      "sexo": "M"
-    },
-    {
-      "id": 6,
-      "nome": "Patrícia",
-      "sexo": "F"
-    },
-    {
-      "id": 7,
-      "nome": "Paula",
-      "sexo": "F"
-    },
-    {
-      "id": 8,
-      "nome": "Rodrigo",
-      "sexo": "M"
-    },
-    {
-      "id": 9,
-      "nome": "Luana",
-      "sexo": "F"
-    },
-    {
-      "id": 10,
-      "nome": "Fernanda",
-      "sexo": "F"
-    },
-    {
-      "id": 11,
-      "nome": "Giovana",
-      "sexo": "F"
-    },
-    {
-      "nome": "Roberto",
+      "nome": "Vinicius",
       "sexo": "M",
-      "id": 12
+      "id": 3
     },
     {
-      "nome": "Camila",
+      "nome": "Larissa",
+      "sexo": "F",
+      "id": 4
+    },
+    {
+      "nome": "Patricia",
+      "sexo": "F",
+      "id": 5
+    },
+    {
+      "nome": "Luana",
+      "sexo": "F",
+      "id": 6
+    },
+    {
+      "nome": "Rodrigo",
+      "sexo": "M",
+      "id": 7
+    },
+    {
+      "nome": "Leo",
+      "sexo": "M",
+      "id": 8
+    },
+    {
+      "nome": "Bruno",
+      "sexo": "M",
+      "id": 9
+    },
+    {
+      "nome": "Manuel",
+      "sexo": "M",
+      "id": 10
+    },
+    {
+      "nome": "Fernanda",
       "sexo": "F",
       "id": 13
     },
     {
-      "nome": "Arnaldo",
+      "nome": "OIII",
       "sexo": "M",
       "id": 14
     }
